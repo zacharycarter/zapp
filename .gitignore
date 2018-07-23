@@ -1,0 +1,6 @@
+nimcache
+
+.DS_Store
+
+public/*.wasm
+public/*.wast
