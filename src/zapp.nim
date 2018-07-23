@@ -204,9 +204,6 @@ when defined emscripten:
           echo "expected ", n.len, " real ", e.len, " ", toTag[n.kind], " nesting ", nesting
           return false
         for i in 0 ..< n.len:
-          # console.log(n)
-          console.log(e.childNodes)
-          console.log(e.childNodes.child(0))
           if not same(n[i], e[i], nesting+1): return false
     else:
       echo "VDOM: ", toTag[n.kind], " DOM: ", e.nodename
