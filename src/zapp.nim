@@ -56,7 +56,7 @@ when defined emscripten:
     mainLoopRunning = true
     gcRequested = false
     lastFullCollectTime = 0.0
-    root = "ROOT" 
+    root = "zapp" 
     initProc: proc()
     renderProc: proc(): VNode
 
@@ -713,7 +713,6 @@ when defined emscripten:
     when defined emscripten:
       proc render(): VNode =
         result = buildHtml(tdiv):
-          tdiv(class="test"):
-            text "Hello zapp!"
+          text "Hello zapp!"
 
       setRenderer(render)
