@@ -713,10 +713,10 @@ when defined emscripten:
 
 
   when isMainModule:
+    when defined emscripten:
+      proc render(): VNode =
+        result = buildHtml(tdiv):
+          tdiv(class="test"):
+            text "Hello zapp!"
 
-    proc render(): VNode =
-      result = buildHtml(tdiv):
-        tdiv(class="test"):
-          text "Hello World!"
-
-    setRenderer(render)
+      setRenderer(render)
