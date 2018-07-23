@@ -4,3 +4,4 @@ nimcache
 
 public/*.wasm
 public/*.wast
+public/*.js
